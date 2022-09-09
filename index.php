@@ -8,12 +8,26 @@
 
 class Movie 
 {
+    public $original_title;
     public $title;
     public $year;
     public $language;
     public $type;
+
+    public function __construct($original_title, $title, $year, $language, $type)
+    {
+        $this->original_title = $original_title;
+        $this->title = $title;
+        $this->year = $year;
+        $this->language = $language;
+        $this->type = $type;
+    }
+
+    public function GetTitles() {
+        return $original_title . $title;
+    }
 }
 
-
+GetTitles();
 ?>
 
