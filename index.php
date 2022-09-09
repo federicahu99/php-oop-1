@@ -12,7 +12,7 @@ class Movie
     public $title;
     public $year;
     public $language;
-    public $type;
+    public $genre;
 
     public function __construct($original_title, $title, $year, $language, $type)
     {
@@ -20,7 +20,7 @@ class Movie
         $this->title = $title;
         $this->year = $year;
         $this->language = $language;
-        $this->type = $type;
+        $this->genre = $genre;
     }
 
     public function GetTitles() {
@@ -28,6 +28,9 @@ class Movie
     }
 }
 
-GetTitles();
+$movie1 = new Movie ('Fall', 'Fall', '2022', 'en', 'Romance');
+$movie2 = new Movie ('The Good Father', 'Il Padrino', '1990', 'en', 'Drammatic');
+$movie3 = new Movie ('Goodfellas', 'Quei Bravi Ragazzi', '2022', 'en', 'Suspance');
+
 ?>
 
