@@ -21,14 +21,9 @@ class Movie
     }
     
     // all'interno della classe è definito almeno un metodo
-   
-    public function setYear ($year){
-        if(!is_numeric($year) || $year <= 0) return;
-        $this->year = $year;
-    }
 
     public function getTitles() {
-        return $this->original_title . "-" . $this->title;
+        return $this->original_title . " - " . $this->title;
     }
 }   
 
@@ -36,10 +31,6 @@ class Movie
 $movie1 = new Movie('The Good Father', 'Il Padrino', '1990', 'en', 'Drammatic');
 $movie2 = new Movie('Goodfellas', 'Quei Bravi Ragazzi', '2022', 'en', 'Suspance');
 
-echo '<pre>';
-var_dump($movie1);
-var_dump($movie2);
-echo '</pre>';
 ?>
 
 <!DOCTYPE html>
@@ -53,10 +44,16 @@ echo '</pre>';
     <body>
 <!-- vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà <ul> -->
     <ul>
-        <li><h1><?php $movie1->getTitles() ?></h1></li>
-        <li><p><?php $movie1->year ?></p></li>
-        <li><p><?php $movie1->language ?></p></li>
-        <li><p><?php $movie1->genre ?></p></li>
+        <li><h1><?php echo $movie1->getTitles(); ?></h1></li>
+        <li><p><?php echo $movie1->year; ?></p></li>
+        <li><p><?php echo $movie1->language; ?></p></li>
+        <li><p><?php echo $movie1->genre; ?></p></li>
+    </ul>
+    <ul>
+        <li><h1><?php echo $movie2->getTitles(); ?></h1></li>
+        <li><p><?php echo $movie2->year; ?></p></li>
+        <li><p><?php echo $movie2->language; ?></p></li>
+        <li><p><?php echo $movie2->genre; ?></p></li>
     </ul>
 </body>
 </html>
